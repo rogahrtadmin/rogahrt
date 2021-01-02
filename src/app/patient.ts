@@ -1,0 +1,32 @@
+export class Patient{
+    constructor(
+        
+        id:number,
+        name:string,
+        gender:string,
+        age:number,
+        doctorName:string,
+        patientdate:String,
+        patientdateNoTime:String,
+        mobilenumber:String,
+        weight:String,
+        height:String,
+        bp:String,
+        temparature:String,
+        complaints:String,
+        medicines:String,
+        diagnosis:String,
+        diet:String,
+        followup:String,
+        tests:String,
+        occupation:String,
+        address:String,
+        respiratory:String,
+        pulse:String,
+        elaboratecomplaints:String,
+        pasthistory:String,
+        familyhistory:String,
+        generalexam:String,
+        finaldiagnosis:String
+    ){}
+}

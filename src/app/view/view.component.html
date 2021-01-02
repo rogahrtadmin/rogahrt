@@ -1,0 +1,164 @@
+<main id="main">
+
+
+<section id="contact" class="contact">
+  <div id="example" class="container">
+
+    <div class="row"></div>
+    <div class="section-title no-printme">
+
+      <h4><br><br>Prescription</h4>
+    </div>
+
+    <div class="row">
+
+
+
+      <div class="col-lg-12 mt-10 mt-lg-12 d-flex align-items-stretch printme">
+        
+        <form  method="post" role="form" class="php-email-form" >
+          <h4 style="text-align:center">{{output[1].doctoraddress}}</h4>
+          <br>
+          <div class="form-row">
+          <div class="form-group col-md-4">
+            <label ><b>Dr. {{output[1].firstname}}&nbsp;{{output[1].lastname}}</b></label><br>
+            <label ><b>{{output[1].degree}}</b></label><br>
+            <label ><b>{{output[1].address1}}</b></label><br>
+            <label ><b>{{output[1].address2}},{{output[1].city}}</b></label><br>
+            <label ><b>{{output[1].state}},{{output[1].pincode}}</b></label>
+</div>
+<div class="form-group col-md-4"></div>
+        <div class="form-group col-md-4">
+          <br>
+          <br>
+          <br>
+          <label style="text-align: right"><b>Mobile Number:{{output[1].doctormobilenumber}}</b></label><br>
+          <label style="text-align: right"><b> Address:{{output[1].doctoremail}}</b></label><br>
+          <label style="text-align: right"><b> License Number:{{output[1].license}}</b></label><br>
+          <label style="text-align: right"><b> Date:{{output[0].patientdateNoTime}}</b></label>
+          </div>
+        </div>
+        <hr>
+
+
+          &#x2714;	<h4>Patient's Personal Information</h4>
+          <br>
+          <div class="form-row">
+            <div class="form-group col-md-6 ">
+              <label ><b>Full Name</b></label>
+              <p>{{output[0].name}}</p>
+
+          </div>
+          <div class="form-group col-md-3">
+              <label><b>Gender</b></label>
+              <p>{{output[0].gender}}</p>
+
+          </div>
+          <div class="form-group col-md-3">
+            <label ><b>Age</b></label>
+              <p>{{output[0].age}}</p>
+
+          </div>
+          </div> 
+          <div class="form-row">     
+          <div class="form-group col-md-6">
+            <label><b>Occupation</b></label>
+              <p>{{output[0].occupation}}</p>
+          </div>
+          <div class="form-group col-md-6">
+            <label><b>Mobile Number</b></label>
+             <p>{{output[0].mobilenumber}}</p> 
+          </div>
+        </div>
+        <div class="form-group">
+          <label><b>Address</b></label>
+          <p>{{output[0].address}}</p>  
+        </div>
+          <br>
+          <hr>
+          &#x2714;	<h4>Vitals</h4>
+          <br>
+          <div class="form-row">
+          <div class="form-group col-md-2">
+            <label ><b>Weight</b></label>
+            <p>{{output[0].weight}}</p>
+          </div>
+          <div class="form-group col-md-2">
+            <label ><b>Height</b></label>
+            <p>{{output[0].height}}</p>
+          </div>
+          <div class="form-group col-md-2">
+            <label ><b>Blood Pressure</b></label>
+            <p>{{output[0].bp}}</p>
+          </div>
+          <div class="form-group col-md-2">
+            <label ><b>Temparature</b></label>
+            <p>{{output[0].temparature}}</p>
+          </div>
+          <div class="form-group col-md-2">
+            <label ><b>Pulse</b></label>
+            <p>{{output[0].pulse}}</p>
+          </div>
+          <div class="form-group col-md-2">
+            <label ><b>Respiratory Rate</b></label>
+            <p>{{output[0].respiratory}}</p>
+          </div>
+          </div>
+          <br>
+          <hr>
+          &#x2714;	<h4>Chief Complaints/Symptoms </h4>
+          <br>
+          <div class="form-group">
+            <label><b>Complaints</b></label>
+            <p>{{output[0].complaints}}</p>
+        </div>
+      <br>
+      <hr>
+      &#x2714;	<h4>Examinations</h4>
+      <br>
+      <div class="form-group">
+        <label><b>Tests</b></label>
+        {{output[0].tests}}
+    </div>
+    <br>
+    <hr>
+    &#x2714;	<h4>Final Diagnosis</h4>
+    <br>
+    <div class="form-group">
+      <label><b>Diaognosis</b></label>
+      <p>{{output[0].diagnosis}}</p>
+  </div>
+        <br>
+        <hr>
+        &#x2714;	<h4>Treatment Plan</h4>
+        <br>
+        <div class="form-group">
+          <label><b>Medication</b></label>
+          <p>{{output[0].medicines}}</p>
+      </div>
+      <div class="form-group">
+        <label><b>Diet Restrictions</b></label>
+        <p>{{output[0].diet}}</p>
+    </div>
+    <div class="form-group">
+      <label><b>Follow up</b></label>
+      <p>{{output[0].followup}}</p>
+  </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          
+        </form>
+
+        <div class="text-center no-printme">
+          <button type="submit" onclick={window.print()}>Print</button></div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
+</main>
+

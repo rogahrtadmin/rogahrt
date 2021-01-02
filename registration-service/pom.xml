@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  <modelVersion>4.0.0</modelVersion>  
+  <parent> 
+    <groupId>org.springframework.boot</groupId>  
+    <artifactId>spring-boot-starter-parent</artifactId>  
+    <version>2.1.4.RELEASE</version>  
+    <relativePath/>  
+    <!-- lookup parent from repository --> 
+  </parent>  
+  <groupId>com.javatechie</groupId>  
+  <artifactId>registration-service</artifactId>  
+  <version>0.0.1-SNAPSHOT</version>  
+  <name>registration-service</name>  
+  <description>Registration Service</description>  
+  <properties> 
+    <java.version>1.8</java.version> 
+  </properties>  
+  <dependencies> 
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->  
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->  
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->  
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->  
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->  
+    <dependency> 
+      <groupId>mysql</groupId>  
+      <artifactId>mysql-connector-java</artifactId>  
+      <version>8.0.20</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.apache.pdfbox</groupId>  
+      <artifactId>pdfbox</artifactId>  
+      <version>2.0.21</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-data-jpa</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-web</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>mysql</groupId>  
+      <artifactId>mysql-connector-java</artifactId>  
+      <scope>runtime</scope> 
+    </dependency>  
+    <dependency> 
+      <groupId>com.microsoft.sqlserver</groupId>  
+      <artifactId>mssql-jdbc</artifactId>  
+      <version>8.4.0.jre8</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.projectlombok</groupId>  
+      <artifactId>lombok</artifactId>  
+      <optional>true</optional> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-test</artifactId>  
+      <scope>test</scope> 
+    </dependency> 
+  </dependencies>  
+  <build> 
+    <plugins> 
+      <!-- https://mvnrepository.com/artifact/com.microsoft.azure/azure-webapp-maven-plugin -->  
+      <plugin> 
+        <groupId>com.microsoft.azure</groupId>  
+        <artifactId>azure-webapp-maven-plugin</artifactId>  
+        <version>1.9.1</version>  
+        <configuration>
+          <schemaVersion>V2</schemaVersion>
+          <resourceGroup>Rogahrt</resourceGroup>
+          <appName>registration-service-1598862342020</appName>
+          <pricingTier>B1</pricingTier>
+          <region>Southeast Asia</region>
+          <appSettings><property><name>JAVA_OPTS</name>
+          <value>-Dserver.port=80</value></property></appSettings>
+          <runtime>
+            <os>linux</os>
+            <javaVersion>java11</javaVersion>
+            <webContainer>java11</webContainer>
+          </runtime>
+          <deployment>
+            <resources>
+              <resource>
+                <directory>${project.basedir}/target</directory>
+                <includes>
+                  <include>*.jar</include>
+                </includes>
+              </resource>
+            </resources>
+          </deployment>
+        </configuration>
+      </plugin>  
+      <plugin> 
+        <groupId>org.springframework.boot</groupId>  
+        <artifactId>spring-boot-maven-plugin</artifactId> 
+      </plugin> 
+    </plugins> 
+  </build> 
+</project>

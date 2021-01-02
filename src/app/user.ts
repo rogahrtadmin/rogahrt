@@ -1,0 +1,19 @@
+export class User{
+    constructor(
+        firstname:string,
+        lastname:string,
+        doctoremail:string,
+        password:string,
+        doctoraddress:string,
+        address1:string,
+        address2:string,
+        landmark:string,
+        city:string,
+        state:string,
+        pincode:number,
+        doctormobilenumber:number,
+        landline:number,
+        license:string,
+        degree:string
+    ){}
+}

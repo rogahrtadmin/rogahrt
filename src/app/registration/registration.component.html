@@ -1,0 +1,148 @@
+
+<main id="main">
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="row"></div>
+    <div class="section-title">
+
+      <h4><br><br>Register Now</h4>
+    </div>
+
+    <div class="row">
+
+
+
+      <div class="col-lg-12 mt-10 mt-lg-12 d-flex align-items-stretch">
+        <form  method="post" role="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()"  class="php-email-form">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>First Name</label>
+              <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+              <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstname.errors.required">First Name is required</div>
+              </div>
+          </div>
+          <div class="form-group col-md-6">
+              <label>Last Name</label>
+              <input type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+              <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                  <div *ngIf="f.lastname.errors.required">Last Name is required</div>
+              </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" formControlName="doctoremail" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.doctoremail.errors }" />
+            <div *ngIf="submitted && f.doctoremail.errors" class="invalid-feedback">
+                <div *ngIf="f.doctoremail.errors.required">Email is required</div>
+                <div *ngIf="f.doctoremail.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" formControlName="confirmpassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmpassword.errors }" />
+            <div *ngIf="submitted && f.confirmpassword.errors" class="invalid-feedback">
+                <div *ngIf="f.confirmpassword.errors.required">Confirm Password is required</div>
+                <div *ngIf="f.confirmpassword.errors.mustMatch">Passwords must match</div>
+            </div>
+        </div>
+          
+          <div class="form-group">
+            <label >Clinic/Office Name</label>
+            <input type="text" formControlName="doctoraddress" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.doctoraddress.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.doctoraddress.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.doctoraddress.errors.required">Clinic/Office is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label >Clinic/Office Address Line 1</label>
+            <input type="text" class="form-control" formControlName="address1" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.address1.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.address1.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.address1.errors.required">Clinic/Office Address Line 1 is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label >Clinic/Office Address Line 2</label>
+            <input type="text" class="form-control" formControlName="address2" />
+          </div>
+          <div class="form-group">
+            <label >Landmark</label>
+            <input type="text" class="form-control" formControlName="landmark"/>
+          </div>
+          <div class="form-group">
+            <label >City/Town/Village</label>
+            <input type="text" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.city.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.city.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.city.errors.required">City/Town/Village is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label >State</label>
+            <input type="text" class="form-control" formControlName="state" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.state.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.state.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.state.errors.required">State is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label >Pin Code</label>
+            <input type="number" class="form-control" formControlName="pincode"  [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.pincode.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.pincode.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.pincode.errors.required">Pin Code is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="number" class="form-control" formControlName="doctormobilenumber" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.doctormobilenumber.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.doctormobilenumber.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.doctormobilenumber.errors.required">Mobile Number is required</div>
+              </div>
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <label>Landline</label>
+            <input type="number" class="form-control" formControlName="landline" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.landline.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.landline.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.landline.errors.required">Landline is required</div>
+              </div>
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <label>Medical License Number</label>
+            <input type="number" class="form-control" formControlName="license" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.license.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.license.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.license.errors.required">Medical License Number is required</div>
+              </div>
+            <div class="validate"></div>
+          </div>
+
+          <div class="form-group">
+            <label >Degrees:</label>
+            <input type="text" class="form-control" formControlName="degree" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.degree.errors }" required/>
+            <div *ngIf="submitted &amp;&amp; registerForm.controls.degree.errors" class="text-danger">
+              <div *ngIf="registerForm.controls.degree.errors.required">Medical License Number is required</div>
+              </div>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit" >Register</button></div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
+</main>

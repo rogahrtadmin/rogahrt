@@ -1,0 +1,7 @@
+com\reg\service\api\dao\UserRepository.class
+com\reg\service\api\model\Disease.class
+com\reg\service\api\RegistrationServiceApplication.class
+com\reg\service\api\dao\PatientRepository.class
+com\reg\service\api\model\User.class
+com\reg\service\api\dao\DiseaseRepository.class
+com\reg\service\api\model\Patient.class

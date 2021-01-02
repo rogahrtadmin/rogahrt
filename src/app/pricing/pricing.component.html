@@ -1,0 +1,65 @@
+
+<main id="main">
+  <section id="pricing" class="pricing">
+    <div class="container">
+
+      <div class="section-title">
+        <br>
+        <br>
+        <h2>Pricing</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4" >
+          <div class="box">
+            <h3>Free Trial</h3>
+            <h4><sup>&#x20B9;</sup>{{this.freetrial}}<span>One month</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i> E-Prescription Feature</li>
+              <li><i class="bx bx-check"></i> Patient Count</li>
+              <li><i class="bx bx-check"></i> Patient Database</li>
+              <li class="na"><i class="bx bx-x"></i> <span>Disease vs Symptoms</span></li>
+              <li class="na"><i class="bx bx-x"></i> <span>Patient Gender Metrics</span></li>
+            </ul>
+            <a  class="buy-btn" (click)="registerForFree()">Get Started</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="box ">
+            <h3>Monthly Plan</h3>
+            <h4><sup>&#x20B9;</sup>{{this.monthly}}<span>per month</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i> E-Prescription Feature</li>
+              <li><i class="bx bx-check"></i> Patient Count</li>
+              <li><i class="bx bx-check"></i> Patient Database</li>
+              <li><i class="bx bx-check"></i> Disease vs Symptoms</li>
+              <li><i class="bx bx-check"></i> Patient Gender Metrics</li>
+            </ul>
+            <a class="buy-btn" (click)="registerForMonth()">Get Started</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" >
+          <div class="box featured">
+            <h3>Yearly Plan</h3>
+            <h4><sup>&#x20B9;</sup>{{this.yearly}}<span>per Annum</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i> E-Prescription Feature</li>
+              <li><i class="bx bx-check"></i> Patient Count</li>
+              <li><i class="bx bx-check"></i> Patient Database</li>
+              <li><i class="bx bx-check"></i> Disease vs Symptoms</li>
+              <li><i class="bx bx-check"></i> Patient Gender Metrics</li>
+            </ul>
+            <a class="buy-btn" (click)="registerForYear()">Get Started</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Pricing Section -->
+
+  </main>

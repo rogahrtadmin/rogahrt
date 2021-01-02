@@ -1,0 +1,264 @@
+
+<main id="main">
+    <section id="contact" class="contact">
+
+    <header id="header1" >
+      <div class="container d-flex align-items-center">
+    
+        <h1 class="logo mr-auto"></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li>
+              <a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+              <li>
+                <a href="/prescription"><i class="fa fa-wheelchair"></i> <span>New Prescription</span></a>
+            </li> 
+            <li><a href="#portfolio">My Details</a></li>
+            <li><a href="#team">Subscription Status</a></li>
+            <li><a href="#contact">Logout</a></li>
+    
+          </ul>
+        </nav><!-- .nav-menu -->
+      </div>
+    </header><!-- End Header -->
+  </section>
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+    
+      <div class="container" >
+  
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="icon"><i class="bx bx-file"></i></div>
+           <div class="dash-widget-info text-right">
+      <h4><a href="/prescription">New Prescription</a></h4>
+        </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                  <div class="dash-widget-info text-right">
+                    <h4><a href="">View Patients </a></h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                  <div class="dash-widget-info text-right">
+                    <h4><a href="/disease">Diseases</a></h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                  <div class="dash-widget-info text-right">
+                    <h4><a href="">Edit Profile</a></h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+  <section id="widgets" class="widegts">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+<span class="dash-widget-bg1"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
+<div class="dash-widget-info text-right">
+  <h3>{{this.name}}</h3>
+  <span class="widget-title1">Today's Patient Count <i class="fa fa-check" aria-hidden="true"></i></span>
+</div>
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+              <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
+              <div class="dash-widget-info text-right">
+                  <h3>{{this.count}}</h3>
+                  <span class="widget-title2">This Month's Patient Count <i class="fa fa-check" aria-hidden="true"></i></span>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+              <span class="dash-widget-bg3"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+              <div class="dash-widget-info text-right">
+                  <h3>{{this.yearCount}}</h3>
+                  <span class="widget-title3">This Year's Patient Count <i class="fa fa-check" aria-hidden="true"></i></span>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+          <div class="dash-widget">
+              <span class="dash-widget-bg4"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+              <div class="dash-widget-info text-right">
+                  <h3>{{this.yearCount}}</h3>
+                  <span class="widget-title4">Complete Patient Count <i class="fa fa-check" aria-hidden="true"></i></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div>  
+  </section>
+
+<section id="services" class="services section-bg">
+  <div class="container">
+
+        <div class="row">
+          <div id="services"  class="col-12 grid-margin">
+            
+            <div class="box1"> 
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Patients Details</h4>
+                <div class="table-responsive">
+
+                  <input type="text" class="search-query form-control" placeholder="Search With Patient's name"  name="email" [(ngModel)]="email"/>
+                  <span class="input-group-btn">
+                      <button class="btn btn-danger" type="button" (click)="findUserByEmailId()">
+                          <span class=" glyphicon glyphicon-search"> Search</span>
+                      </button>
+                      </span>
+                      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ID
+                        </th>
+                        <th> Name </th>
+                        <th> Gender </th>
+                        <th> Age </th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+
+                      <tr *ngFor="let patient of patients">
+                        <td>{{patient.id}}</td>
+                        <td> {{patient.name}} </td>
+          <td>{{patient.gender}}</td>
+          <td>{{patient.age}}</td>
+          <td>{{patient.patientdate}}</td>
+          <td>                  <span class="input-group-btn">
+            <button class="btn btn-danger" type="button" (click)="getView(patient.id,patient.name,patient.gender,patient.age,patient.patientdate)">
+                <span class=" glyphicon glyphicon-search"> view</span>
+            </button>
+            </span></td>
+          
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+
+
+  </div>
+</section>
+  </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <h4>Join Our Newsletter</h4>
+              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+              <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Rogahrt</h3>
+              <p>
+                A108 Adam Street <br>
+                New York, NY 535022<br>
+                United States <br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+  
+    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
